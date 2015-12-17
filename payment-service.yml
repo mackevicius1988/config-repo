@@ -1,0 +1,20 @@
+# Spring properties
+spring:
+  application:
+     name: payment-service
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+# HTTP Server
+server:
+  port: 3333   # HTTP (Tomcat) port
+  
+  spring:
+  rabbitmq:
+    addresses: ${vcap.services.${PREFIX:}rabbitmq.credentials.uri:amqp://${RABBITMQ_HOST:localhost}:${RABBITMQ_PORT:5672}}
+ 
+  
