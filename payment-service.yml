@@ -18,4 +18,4 @@ server:
     addresses: ${vcap.services.${PREFIX:}rabbitmq.credentials.uri:amqp://${RABBITMQ_HOST:localhost}:${RABBITMQ_PORT:5672}}
  
 configuration:
-  storeName: From REMOTE store
+  storeName: From IDEAL store
